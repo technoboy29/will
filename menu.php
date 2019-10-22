@@ -19,7 +19,7 @@ require_once 'conexion.php';
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
-<body style="background-image: url('images/12345.jpg');>
+<body style="background-image: url('images/12345.jpg');">
 
 <?php if(isset($_SESSION['errores'])): ?>
 	<?php var_dump($_SESSION['errores']);?>

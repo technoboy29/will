@@ -22,12 +22,15 @@
        $sql = "INSERT INTO computadores (nombre, procesador, grafica, madre, ram, disco, capacidad, fuente, monitor, caja, teclado, raton, disipacion, altavoces, ventiladores, imagen) 
        VALUES ('$nombrec','$procesadorc','$grafica','$madre','$ram','$disco','$tipodisco','$fuente','$monitor','$caja','$teclado','$raton','$disipacion','$altavoces','$ventil','$imagen')";
 
-        $result = mysqli_query($conexion,$sql);
+        $result = mysqli_query($conn,$sql);
         if(!$result){
             die("SQL Fail");
-        }else{
-            echo "Guardado";
         }
+
+        $_SESSION['message'] = "PC Guardado";
+        $_SESSION['message_type'] = "success";
+
+        header("Location: crud.php");
 
             
 

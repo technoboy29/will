@@ -88,6 +88,13 @@ ul, li {
 	list-style-type: none;
 }
 
+#imagenm{
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+
+
 
 /*---------------------------------------------*/
 input {
@@ -176,8 +183,8 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  background: #f2f2f2;  
-  background-image: url('images/1234.jpg');
+
+  background-image: url('images/12345.jpg');
 }
 
 .wrap-login100 {

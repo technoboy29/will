@@ -1,3 +1,4 @@
+<?php include("conexionc.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +16,26 @@
 	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/crud.css">
+	<link rel="stylesheet" type="text/css" href="boostrap/boostrap/dist/css/bootstrap.css">
 </head>
-<body>
+<body style="background-image: url('images/12345.jpg');">
 
 	
-	<div class="limiter">
+		<div class="limiter">
+		<?php if(isset($_SESSION['message'])) { ?>
+				
+				<div class="alert alert-<?= $_SESSION['message_type']; ?> alert-dismissible fade show" role="alert">
+				<?= $_SESSION['message'] ?>
+							<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+							</div>
+				<?php session_unset(); } ?> 
 		<div class="container-login100">
+		
+				
 			<div class="wrap-login100">
+				
 				<form action="create.php" method="POST" enctype="multipart/form-data" class="login100-form validate-form">
 					<span class="login100-form-title p-b-26">
 						CRUD PC GAMER
@@ -127,26 +141,11 @@
 						</div>
 					</div>
 
-					<div class="container-login100-form-btn">
-						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-							<a class="login100-form-btn" name="act" href="actualizar.php">
-								Actualizar
-							</a>
-						</div>
-					</div>
-
-					<div class="container-login100-form-btn">
-						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-							<a class="login100-form-btn" name="elim" href="eliminar.php">
-								Eliminar
-							</a>
-						</div>
-					</div>
 
 					
 				</form>
+
+				
 			</div>
 		</div>
 	</div>
